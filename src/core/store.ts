@@ -3,12 +3,11 @@ import { combineReducers } from 'redux'
 import undoable from 'redux-undo'
 import { persistReducer, persistStore } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import { createWrapper, MakeStore } from 'next-redux-wrapper'
 
 import { ComponentsStateWithUndo } from './models/components'
 import { AppState } from './models/app'
 import models from './models'
-import filterUndoableActions from '~utils/undo'
+import filterUndoableActions from 'src/utils/undo'
 
 export type RootState = {
   app: AppState
@@ -54,6 +53,4 @@ export const storeConfig = {
 }
 
 // @ts-ignore
-export const makeStore: MakeStore<RootState> = () => init(storeConfig)
-
-export const wrapper = createWrapper<RootState>(makeStore)
+export const store = init(storeConfig)

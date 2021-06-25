@@ -1,9 +1,9 @@
 import React from 'react'
-import Head from 'next/head'
+// import Head from 'next/head'
 
 const Metadata = () => {
   return (
-    <Head>
+    <>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
       <meta name="description" content="Visual editor for Chakra UI " />
@@ -78,7 +78,7 @@ const Metadata = () => {
         property="og:image:url"
         content="https://openchakra.app/images/og-graph-color.png"
       />
-    </Head>
+    </>
   )
 }
 

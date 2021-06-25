@@ -1,6 +1,6 @@
 import isBoolean from 'lodash/isBoolean'
 import filter from 'lodash/filter'
-import icons from '~iconsList'
+import icons from 'src/iconsList'
 import { propNames } from '@chakra-ui/react'
 
 const capitalize = (value: string) => {

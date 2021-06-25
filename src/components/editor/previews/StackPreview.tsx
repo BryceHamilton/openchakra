@@ -1,8 +1,8 @@
 import React from 'react'
 import { Stack, Box } from '@chakra-ui/react'
-import { useDropComponent } from '~hooks/useDropComponent'
-import { useInteractive } from '~hooks/useInteractive'
-import ComponentPreview from '~components/editor/ComponentPreview'
+import { useDropComponent } from 'src/hooks/useDropComponent'
+import { useInteractive } from 'src/hooks/useInteractive'
+import ComponentPreview from 'src/components/editor/ComponentPreview'
 
 const StackPreview: React.FC<{ component: IComponent }> = ({ component }) => {
   const { drop, isOver } = useDropComponent(component.id)

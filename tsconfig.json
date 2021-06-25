@@ -15,10 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "~*": ["src/*"]
-    }
+    "baseUrl": "./"
   },
   "include": ["src", "next-env.d.ts"],
   "exclude": ["node_modules"]

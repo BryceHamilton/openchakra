@@ -4,8 +4,8 @@ import { ActionCreators as UndoActionCreators } from 'redux-undo'
 import { Box, Flex, Stack, Button } from '@chakra-ui/react'
 import { CheckCircleIcon } from '@chakra-ui/icons'
 import { FaBomb } from 'react-icons/fa'
-import { gridStyles } from '~components/editor/Editor'
-import { bugsnagClient } from '~utils/bugsnag'
+import { gridStyles } from 'src/components/editor/Editor'
+import { bugsnagClient } from 'src/utils/bugsnag'
 
 type ErrorBoundaryState = {
   hasError: boolean
@@ -13,6 +13,7 @@ type ErrorBoundaryState = {
 
 type ErrorBoundaryProps = {
   undo: () => void
+  children: any
 }
 
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {

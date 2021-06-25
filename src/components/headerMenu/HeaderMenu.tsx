@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 import {
   Box,
   Button,
@@ -38,8 +38,8 @@ const CustomMenuButton: React.FC<
   return <MenuButton as={Button} {...props} />
 })
 
-const ExportMenuItem = dynamic(() => import('./ExportMenuItem'), { ssr: false })
-const ImportMenuItem = dynamic(() => import('./ImportMenuItem'), { ssr: false })
+const ExportMenuItem = React.lazy(() => import('./ExportMenuItem'))
+const ImportMenuItem = React.lazy(() => import('./ImportMenuItem'))
 
 const HeaderMenu = () => {
   return (

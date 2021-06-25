@@ -24,13 +24,13 @@ import {
 import { ExternalLinkIcon, SmallCloseIcon, CheckIcon } from '@chakra-ui/icons'
 import { DiGithubBadge } from 'react-icons/di'
 import { AiFillThunderbolt } from 'react-icons/ai'
-import { buildParameters } from '~utils/codesandbox'
-import { generateCode } from '~utils/code'
-import useDispatch from '~hooks/useDispatch'
+import { buildParameters } from 'src/utils/codesandbox'
+import { generateCode } from 'src/utils/code'
+import useDispatch from 'src/hooks/useDispatch'
 import { useSelector } from 'react-redux'
-import { getComponents } from '~core/selectors/components'
-import { getShowLayout, getShowCode } from '~core/selectors/app'
-import HeaderMenu from '~components/headerMenu/HeaderMenu'
+import { getComponents } from 'src/core/selectors/components'
+import { getShowLayout, getShowCode } from 'src/core/selectors/app'
+import HeaderMenu from 'src/components/headerMenu/HeaderMenu'
 
 const CodeSandboxButton = () => {
   const components = useSelector(getComponents)
@@ -212,12 +212,12 @@ const Header = () => {
           direction="row"
           spacing="2"
         >
-          <Link isExternal href="https://github.com/premieroctet/openchakra">
+          <Link href="https://github.com/premieroctet/openchakra">
             <Box as={DiGithubBadge} size={32} color="gray.200" />
           </Link>
           <Box lineHeight="shorter" color="white" fontSize="xs">
             by{' '}
-            <Link isExternal href="https://premieroctet.com" color="teal.100">
+            <Link href="https://premieroctet.com" color="teal.100">
               Premier Octet
             </Link>
           </Box>
